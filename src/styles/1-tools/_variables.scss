@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,600,700|Source+Serif+Pro&display=swap');
+
+/*-------------------------
+*  Sass Variables and Maps
+*--------------------------*/
+$font-sans: 'Source Sans Pro', sans-serif;
+$font-serif: 'Source Serif Pro', serif;
+$font-code: 'Source Code Pro', monospace;
+$base-fs  : 18px;
+
+$font-sizes: (
+   xs: .75rem,
+   sm: .875rem,
+   base: 1rem,
+   lg: 1.125rem,
+   xl: 1.25rem,
+   2xl: 1.5rem,
+   3xl: 1.875rem,
+   4xl: 2.25rem,
+   5xl: 3rem,
+   6xl: 4rem,
+   hero: 10rem
+);
+
+$spaces: (
+   gutter : 10px,
+   spacing: 20,
+);
+$gutter : map-get($spaces, gutter);
+$spacing: map-get($spaces, spacing);
+
+$breakpoints: (
+   xs : 480px,
+   sm : 640px,
+   md : 768px,
+   lg : 1024px,
+   xl : 1280px,
+   xxl: 1700px
+);
+
+// https://www.flaticon.com/packs/social-16
+// https://www.flaticon.com/packs/ui-kit-collection
+$social-media: (
+   facebook : (#3B5998, url('../icons/facebook.svg')),
+   twitter  : (#55ACEE, url('../icons/twitter.svg')),
+   pinterest: (#CC2127, url('../icons/pinterest.svg')),
+   youtube  : (#E52D27, url('../icons/youtube.svg'))
+);
+
+// Some Useful color Vars via http://clrs.cc/
+$ui-colors: (
+   default: #8FCCCC,
+   success: #79D1AD,
+   error  : #e67478,
+   warning: #ed8864,
+   info   : #9279c3
+);
+
+$theme-colors: (
+   vyellow: #FFD662,
+   vblue  : #00539C,
+);
+
+$grayscale-colors: (
+   vblack   : #000,
+   grey-100: #333,
+   grey-200: #3D4852,
+   grey-300: #606F7B,
+   grey-400: #8795A1,
+   grey-500: #DAE1E7,
+   vwhite   : #FFF,
+);
+
+$box-shadows: (
+   sm: '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1)',
+   md: '0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1)',
+   lg: '0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)',
+   xl: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)',
+   2xl: '0 25px 50px -12px rgba(0, 0, 0, 0.3)',
+   inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+   outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+   none: 'none',
+);
+
+$animations: (
+   time     : 320ms,
+   time-slow: 700ms,
+   swing    : cubic-bezier(0.55, 0, 0.1, 1),
+   swift    : cubic-bezier(0.4, 0, 0.2, 1),
+   ease     : ease,
+);
+
+$paddings: (
+   pt: 'padding-top',
+   pr: 'padding-right',
+   pb: 'padding-bottom',
+   pl: 'padding-left'
+);
+
+$margins : (
+   mt: 'margin-top',
+   mr: 'margin-right',
+   mb: 'margin-bottom',
+   ml: 'margin-left'
+);
+
+
+/*-------------------------
+*  CSS Variables
+*--------------------------*/
+:root {
+   // Typography
+   --font-sans: #{$font-sans};
+   --font-serif: #{$font-serif};
+   --font-code: #{$font-code};
+   --base-fs  : #{$base-fs};
+
+   // Font Sizes
+   @each $property, $value in $font-sizes {
+      .text-#{$property} {
+         font-size: calc(#{$value} * 1.67);
+      }
+
+      --size-#{$property}: calc(#{$value} * 1.67);
+   }
+
+   // Spaces
+   @each $property, $value in $spaces {
+      --#{$property}: #{$value};
+   }
+
+   // Media Queries
+   @include use-map($breakpoints);
+
+   // Colors
+   @include use-map($ui-colors);
+   @include use-map($theme-colors);
+   @include use-map($grayscale-colors);
+
+   // Shadows
+   @each $property, $value in $box-shadows {
+      --box-shadow-#{$property}: #{$value};
+   }
+
+   // Animations
+   @include use-map($animations);
+   --transition-default: all var(--time) var(--ease);
+
+}
+
+@include mq(sm) {
+   :root {
+      // Font Sizes
+      @each $property, $value in $font-sizes {
+         .text-#{$property} {
+            font-size: $value;
+            line-height: calc(#{$value} * 1.25);
+         }
+
+         --size-#{$property}: #{$value};
+      }
+
+      p {
+         font-size: 16px;
+      }
+
+      // Spaces
+      @each $property, $value in $spaces {
+         --#{$property}: calc(#{$value} * .82);
+      }
+   }
+}
+
+
+/*-------------------------
+*  Project Variables
+*--------------------------*/

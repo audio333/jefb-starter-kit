@@ -1,0 +1,82 @@
+@each $pd, $padding in $paddings {
+	@for $i from 0 through $spacing {
+		.#{$pd}-#{$i} {
+			#{$padding}: calc(var(--gutter) * #{$i});
+		}
+	}
+
+	@for $i from 0 through $spacing {
+		@media (max-width: var(--md)) {
+
+			.#{$pd}-md-#{$i} {
+				#{$padding}: calc(var(--gutter) * #{$i});
+			}
+		}
+	}
+
+	@for $i from 0 through $spacing {
+		@media (max-width: var(--sm)) {
+
+			.#{$pd}-sm-#{$i} {
+				#{$padding}: calc(var(--gutter) * #{$i});
+			}
+		}
+	}
+}
+
+@for $i from 0 through $spacing {
+	.p-#{$i} {
+		padding: calc(var(--gutter) * #{$i});
+	}
+
+	.m-#{$i} {
+		margin: calc(var(--gutter) * #{$i});
+	}
+}
+
+@each $mg, $margin in $margins {
+	@for $i from 0 through $spacing {
+		.#{$mg}-#{$i} {
+			#{$margin}: calc(var(--gutter) * #{$i});
+		}
+
+		.#{$mg}-n-#{$i} {
+			#{$margin}: calc(var(--gutter) * #{$i});
+		}
+	}
+
+	@for $i from 0 through $spacing {
+		@media (max-width: var(--md)) {
+
+			.#{$mg}-md-#{$i} {
+				#{$margin}: calc(var(--gutter) * #{$i});
+			}
+
+			.#{$mg}-md-n-#{$i} {
+				#{$margin}: calc(var(--gutter) * #{$i});
+			}
+		}
+	}
+
+	@for $i from 0 through $spacing {
+		@media (max-width: var(--sm)) {
+
+			.#{$mg}-sm-#{$i} {
+				#{$margin}: calc(var(--gutter) * #{$i});
+			}
+
+			.#{$mg}-sm-n-#{$i} {
+				#{$margin}: calc(var(--gutter) * #{$i});
+			}
+		}
+	}
+}
+
+// Usage:
+// * = t / r / b / l
+// (n) = number
+
+// p*-(n)
+// m*-(n)
+// p*-md-(n) / p*-sm-(n)
+// m*-md-(n) / m*-sm-(n)

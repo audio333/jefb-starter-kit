@@ -1,0 +1,13 @@
+@each $color, $hex in $ui-colors {
+	.text-#{$color} {
+		color: $hex;
+	}
+
+	.bg-#{$color} {
+		background-color: $hex;
+	}
+
+	.border-#{$color} {
+		border-color: $hex;
+	}
+}

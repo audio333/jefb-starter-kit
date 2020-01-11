@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+   box-sizing: inherit;
+}
+
+body {
+	background-color: var(--vwhite);
+	line-height: 1.6;
+	overflow-x: hidden;
+	position: relative;
+}
+
+p, ul, ol {
+	margin: 0 0 1.65em 0;
+}
+
+p, li {
+	line-height: 1.65;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+hr {
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 10px 0 30px;
+	height: 0;
+}
+
+a {
+	color: #0074D9;
+	text-decoration: none;
+   outline: 0;
+
+   &:hover,
+   &:focus {
+      color: lighten(#0074D9, 20%);
+   }
+}
+
