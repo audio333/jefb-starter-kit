@@ -14015,7 +14015,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../icons/facebook.svg":[["facebook.f1863ba2.svg","icons/facebook.svg"],"icons/facebook.svg"],"./../icons/twitter.svg":[["twitter.88ad76c6.svg","icons/twitter.svg"],"icons/twitter.svg"],"./../icons/pinterest.svg":[["pinterest.f33ee801.svg","icons/pinterest.svg"],"icons/pinterest.svg"],"./../icons/youtube.svg":[["youtube.6b512622.svg","icons/youtube.svg"],"icons/youtube.svg"],"_css_loader":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modules/MobileMenu.js":[function(require,module,exports) {
+},{"./../icons/facebook.svg":[["facebook.f1863ba2.svg","icons/facebook.svg"],"icons/facebook.svg"],"./../icons/twitter.svg":[["twitter.88ad76c6.svg","icons/twitter.svg"],"icons/twitter.svg"],"./../icons/pinterest.svg":[["pinterest.f33ee801.svg","icons/pinterest.svg"],"icons/pinterest.svg"],"./../icons/youtube.svg":[["youtube.6b512622.svg","icons/youtube.svg"],"icons/youtube.svg"],"_css_loader":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@fortawesome/fontawesome-free/css/all.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../webfonts/fa-brands-400.eot":[["fa-brands-400.7b5acd02.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"],"./../webfonts/fa-brands-400.woff2":[["fa-brands-400.34cc846b.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"],"./../webfonts/fa-brands-400.woff":[["fa-brands-400.75159956.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff"],"./../webfonts/fa-brands-400.ttf":[["fa-brands-400.f885063e.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"],"./../webfonts/fa-brands-400.svg":[["fa-brands-400.1f0eb095.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg"],"./../webfonts/fa-regular-400.eot":[["fa-regular-400.d4b9b17f.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot"],"./../webfonts/fa-regular-400.woff2":[["fa-regular-400.82c42f2f.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"],"./../webfonts/fa-regular-400.woff":[["fa-regular-400.adc5c7aa.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff"],"./../webfonts/fa-regular-400.ttf":[["fa-regular-400.b073eab5.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"],"./../webfonts/fa-regular-400.svg":[["fa-regular-400.16d6ac71.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg"],"./../webfonts/fa-solid-900.eot":[["fa-solid-900.0b60ff24.eot","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot"],"./../webfonts/fa-solid-900.woff2":[["fa-solid-900.55d5ef42.woff2","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"],"./../webfonts/fa-solid-900.woff":[["fa-solid-900.f824330b.woff","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff"],"./../webfonts/fa-solid-900.ttf":[["fa-solid-900.47a039f3.ttf","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"],"./../webfonts/fa-solid-900.svg":[["fa-solid-900.d08d5f59.svg","../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg"],"_css_loader":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/modules/MobileMenu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14115,6 +14120,8 @@ var _slickCarousel = _interopRequireDefault(require("slick-carousel"));
 
 require("../styles/main.scss");
 
+require("@fortawesome/fontawesome-free/css/all.css");
+
 var _MobileMenu = _interopRequireDefault(require("./modules/MobileMenu"));
 
 var _HeroSlider = _interopRequireDefault(require("./modules/HeroSlider"));
@@ -14128,7 +14135,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Instantiate a new object using our modules/classes
 var mobileMenu = new _MobileMenu.default();
 var heroSlider = new _HeroSlider.default();
-},{"jquery":"../node_modules/jquery/dist/jquery.js","slick-carousel":"../node_modules/slick-carousel/slick/slick.js","../styles/main.scss":"styles/main.scss","./modules/MobileMenu":"scripts/modules/MobileMenu.js","./modules/HeroSlider":"scripts/modules/HeroSlider.js"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"jquery":"../node_modules/jquery/dist/jquery.js","slick-carousel":"../node_modules/slick-carousel/slick/slick.js","../styles/main.scss":"styles/main.scss","@fortawesome/fontawesome-free/css/all.css":"../node_modules/@fortawesome/fontawesome-free/css/all.css","./modules/MobileMenu":"scripts/modules/MobileMenu.js","./modules/HeroSlider":"scripts/modules/HeroSlider.js"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14156,7 +14163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38239" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45455" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

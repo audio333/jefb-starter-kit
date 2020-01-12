@@ -5,10 +5,10 @@
 *--------------------------*/
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
-$font-code: 'Source Code Pro', monospace;
-$base-fs  : 18px;
+$font-mono: 'Source Code Pro', monospace;
 
-$font-sizes: (
+
+$rems: (
    xs: .75rem,
    sm: .875rem,
    base: 1rem,
@@ -35,7 +35,7 @@ $breakpoints: (
    md : 768px,
    lg : 1024px,
    xl : 1280px,
-   xxl: 1700px
+   2xl: 1700px
 );
 
 // https://www.flaticon.com/packs/social-16
@@ -57,18 +57,18 @@ $ui-colors: (
 );
 
 $theme-colors: (
-   vyellow: #FFD662,
-   vblue  : #00539C,
+   'yellow': #FFD662,
+   'blue'  : #00539C,
 );
 
 $grayscale-colors: (
-   vblack   : #000,
+   'black'   : #000,
    grey-100: #333,
    grey-200: #3D4852,
    grey-300: #606F7B,
    grey-400: #8795A1,
    grey-500: #DAE1E7,
-   vwhite   : #FFF,
+   'white'   : #FFF,
 );
 
 $box-shadows: (
@@ -112,21 +112,21 @@ $margins : (
    // Typography
    --font-sans: #{$font-sans};
    --font-serif: #{$font-serif};
-   --font-code: #{$font-code};
-   --base-fs  : #{$base-fs};
+   --font-mono: #{$font-mono};
 
-   // Font Sizes
-   @each $property, $value in $font-sizes {
+   // Sizes
+   @each $property, $value in $rems {
       .text-#{$property} {
-         font-size: calc(#{$value} * 1.67);
+         font-size: $value;
+         line-height: calc(#{$value} * 1.25);
       }
 
-      --size-#{$property}: calc(#{$value} * 1.67);
+      --size-#{$property}: #{$value};
    }
 
    // Spaces
    @each $property, $value in $spaces {
-      --#{$property}: #{$value};
+      --#{$property}: calc(#{$value} * .82);
    }
 
    // Media Queries
@@ -145,28 +145,41 @@ $margins : (
    // Animations
    @include use-map($animations);
    --transition-default: all var(--time) var(--ease);
-
 }
 
-@include mq(sm) {
+
+@include mq(md) {
    :root {
       // Font Sizes
-      @each $property, $value in $font-sizes {
+      @each $property, $value in $rems {
          .text-#{$property} {
-            font-size: $value;
-            line-height: calc(#{$value} * 1.25);
+            font-size: calc(#{$value} * 1.3);
          }
 
-         --size-#{$property}: #{$value};
+         --size-#{$property}: calc(#{$value} * 1.3);
       }
 
       p {
-         font-size: 16px;
+         font-size: 18px;
       }
 
       // Spaces
       @each $property, $value in $spaces {
-         --#{$property}: calc(#{$value} * .82);
+         --#{$property}: #{$value};
+      }
+   }
+}
+
+
+@include mq(xl) {
+   :root {
+      // Font Sizes
+      @each $property, $value in $rems {
+         .text-#{$property} {
+            font-size: calc(#{$value} * 1.5);
+         }
+
+         --size-#{$property}: calc(#{$value} * 1.5);
       }
    }
 }

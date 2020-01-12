@@ -30,28 +30,42 @@ input[type="button"] {
 
 .button {
    // general styling for all buttons
-   font-size: calc(var(--size-base) * .67);
+   font-size: var(--size-xs);
 
    // Generates modifier classes for .button
    @each $theme, $color in $ui-colors {
       &--#{$theme} {
          background-color: $color;
-         color: transparentize(map-get($grayscale-colors, vwhite), .2);
+         color: transparentize(map-get($grayscale-colors, 'white'), .2);
       }
       &--#{$theme}:hover,
       &--#{$theme}:focus {
          // background-color: shade($color, 20%);
-         color: var(--vwhite);
+         color: var(--white);
       }
    }
 
-   @each $property, $value in $font-sizes {
+   @each $property, $value in $rems {
       &--#{$property} {
-         font-size: calc(var(--size-#{$property}) * .67);
+         font-size: var(--size-#{$property});
          padding: calc(var(--gutter) * 0.8) calc(var(--gutter) * 1.8);
       }
    }
 }
+
+
+@include mq(sm) {
+   .button {
+      font-size: calc(var(--size-base) * .67);
+
+      @each $property, $value in $rems {
+         &--#{$property} {
+            font-size: calc(var(--size-#{$property}) * .67);
+         }
+      }
+   }
+}
+
 
 // Usage:
 // .button .button--default / success / error / warning / info

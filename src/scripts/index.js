@@ -5,6 +5,7 @@ import slick from 'slick-carousel';
 
 // CSS
 import '../styles/main.scss';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 // Our modules / classes
 import MobileMenu from './modules/MobileMenu';
