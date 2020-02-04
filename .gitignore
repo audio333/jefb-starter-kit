@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/linux,macos,windows,sublimetext,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=linux,macos,windows,sublimetext,visualstudiocode
+node_modules
+bower_components
+.cache
 
 ### Linux ###
 *~

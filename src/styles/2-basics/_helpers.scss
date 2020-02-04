@@ -6,14 +6,26 @@
    width: 100%;
    margin-right: auto;
    margin-left: auto;
-   padding-right: var(--gutter);
-   padding-left: var(--gutter);
+   // padding-right: var(--gutter);
+   // padding-left: var(--gutter);
 
    @include clearfix;
 }
 
 .container {
-   max-width: var(--xl);
+	max-width: 82%;
+
+	@include mq(xs) {
+		max-width: 90%;
+	}
+
+	@include mq(lg) {
+		max-width: 87%;
+	}
+
+	// @include mq(lg) {
+	// 	max-width: 87%;
+	// }
 }
 
 .container--fluid {

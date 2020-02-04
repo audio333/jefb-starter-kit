@@ -1,17 +1,23 @@
 .social-icon {
-   background-size: var(--size-base);
-   width: calc(var(--size-base) * 1.8);
-   height: calc(var(--size-base) * 1.8);
+   --size-sm: .8rem;
+   background-size: var(--size-sm);
+   width: calc(var(--size-sm) * 2.2);
+   height: calc(var(--size-sm) * 2.2);
    border-radius: 50%;
    padding: .5rem;
    text-align: center;
    background-position: center;
    background-repeat: no-repeat;
    cursor: pointer;
+   transition: background .2s linear;
+
+   &:hover {
+      background-color: var(--red);
+   }
 
    @each $theme, $value in $social-media {
       &--#{$theme} {
-         background-color: nth($value, 1);
+         background-color: var(--black);
          background-image: nth($value, 2);
       }
    }

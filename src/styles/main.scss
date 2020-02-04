@@ -6,10 +6,11 @@
 
 
 // 2 - BASICS
+@import '2-basics/animations';
 @import '2-basics/base';
 @import '2-basics/typography';
-@import '2-basics/helpers';
 @import '2-basics/spacing';
+@import '2-basics/helpers';
 @import '2-basics/color';
 @import '2-basics/media';
 
@@ -17,9 +18,16 @@
 // 3 - LAYOUT
 @import '3-layout/nav';
 @import '3-layout/header';
+@import '3-layout/footer';
 
 
 // 4 - MODULES
+@import '4-modules/hero';
+@import '4-modules/featured-products-cards';
+@import '4-modules/description';
+@import '4-modules/to-gallery';
+@import '4-modules/contact';
+// small components
 @import '4-modules/buttons';
 @import '4-modules/icons';
 @import '4-modules/banner';

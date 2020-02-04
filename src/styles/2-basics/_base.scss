@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -15,10 +16,15 @@ body {
 
 p, ul, ol {
 	margin: 0 0 1.65em 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style: none;
 }
 
 p, li {
-	line-height: 1.65;
+	line-height: 1.6;
 }
 
 em {
@@ -38,13 +44,30 @@ hr {
 }
 
 a {
-	color: #0074D9;
+	color: var(--black);
 	text-decoration: none;
    outline: 0;
 
    &:hover,
    &:focus {
-      color: lighten(#0074D9, 20%);
+      color: var(--red);
    }
 }
+
+// Forms
+input[type="text"],
+input[type="email"],
+textarea {
+	border: none;
+	border-radius: 3px;
+	padding: 11px;
+}
+
+textarea {
+	max-width: 100%;
+}
+
+
+
+
 

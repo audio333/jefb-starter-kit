@@ -1,17 +1,23 @@
+html {
+	// @include fluid-type(font-size, 320px, 1366px, 16px, 18px);
+	font-size: 16px;
+
+	@include mq(lg) {
+		font-size: 18px;
+	}
+}
+
 body {
 	font-family: var(--font-sans);
 	font-weight: 400;
-	font-size: 16px;
 	line-height: 1.6;
-	letter-spacing: 0.5px;
-   color: var(--grey-100);
+   color: var(--black);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 p {
-	font-family: var(--font-serif);
-	line-height: 2;
+	// font-size: 1rem;
 }
 
 .h1, .h2, .h3, .h4, .h5,
@@ -21,10 +27,10 @@ h1, h2, h3, h4, h5 {
 
 // Headings
 .gigantic {
-	@include font-size(64px);
+	@include font-size(46px);
 
 	@include mq(sm) {
-		@include font-size(110px, 1.09, -1px);
+		@include font-size(100px, 1.09, -1px);
 	}
 }
 
@@ -68,16 +74,14 @@ h5,
 .h5 {
 	@include font-size(15px);
 
-	@include mq(sm) {
-		@include font-size(20px, 1.35);
+	@include mq(md) {
+		@include font-size(18px, 1.35);
 	}
 }
 
 small,
 .small {
-	@include font-size(10px, 1.2);
-	font-family: var(--font-mono);
-	text-transform: uppercase;
+	@include font-size(14px, 1.2);
 }
 
 // alignments
@@ -108,4 +112,20 @@ small,
 
 .no-line-height {
 	line-height: 1em !important;
+}
+
+
+@each $property, $value in $rems {
+	.text-#{$property} {
+		font-size: $value;
+		line-height: calc(#{$value} * 1.25);
+
+		// @include mq(md) {
+		// 	font-size: calc(#{$value} * 1.04);
+		// }
+
+		// @include mq(lg) {
+		// 	font-size: calc(#{$value} * 1.25);
+		// }
+	}
 }

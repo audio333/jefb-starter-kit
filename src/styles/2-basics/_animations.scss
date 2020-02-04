@@ -1,0 +1,60 @@
+// Reveal Animations
+.fade-in {
+	opacity: 0;
+}
+
+.fade-in.appear {
+	animation: fade-in 500ms forwards ease-in;
+}
+
+.slide-down {
+	opacity: 0;
+}
+
+.slide-down.appear {
+	animation: slide-down 1000ms forwards ease-out;
+}
+
+.scale-up {
+	opacity: 0;
+}
+
+.scale-up.appear {
+	animation: scale-up 800ms forwards ease-out;
+}
+
+// Keyframes
+
+@include keyframes(fade-in) {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@include keyframes(slide-down) {
+	0% {
+		opacity: 0;
+		transform: translateY(-70%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@include keyframes(scale-up) {
+	0% {
+		opacity: 0;
+		transform: scale(50%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(100%);
+	}
+}

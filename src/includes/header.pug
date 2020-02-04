@@ -1,4 +1,18 @@
-<h1 class="mt-0 text-success text-5xl">Header</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero velit nobis sed commodi eaque animi aperiam vel, a architecto praesentium, amet dolorem odit dolorum veniam corrupti laborum eligendi. Incidunt hic, sit beatae! Incidunt labore, mollitia reprehenderit repellat, sapiente praesentium qui!</p>
-<button class="button button--info button--lg mb-5">Learn More</button>
-<hr>
+header
+	img.logo(src="images/logo.png", alt="logo")
+	nav
+		ul.nav__links
+			li: a(href="#") Home
+			li: a(href="#section-featured-products") Scooters
+			li: a(href="#") Promos
+			li: a(href="#") Services
+			li: a(href="#section-contact") Contact Us
+	a.cta(href="#") Our Story
+	a.menu(href="#") Menu
+#mobile__menu.overlay
+	span.close: i.fas.fa-times
+	ul.overlay__content
+		li: a(href="#") About Us
+		li: a(href="#") Gallery
+		li: a(href="#") Testimonials
+.bg-overlay

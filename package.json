@@ -19,6 +19,10 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "slick-carousel": "^1.8.1"
+    "lightbox2": "^2.11.1",
+    "magnific-popup": "^1.1.0",
+    "modules": "^0.4.0",
+    "slick-carousel": "^1.8.1",
+    "slick-lightbox": "^0.2.10"
   }
 }

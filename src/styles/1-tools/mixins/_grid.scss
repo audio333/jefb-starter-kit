@@ -1,0 +1,12 @@
+// Grid layout using floats (for forms)
+// Note: margin must be % unit
+@mixin grid($cols, $mgn) {
+	float: left;
+	margin-right: $mgn;
+	margin-bottom: $mgn;
+	// width: ((100% - (($cols - 1) * $mgn)) / $cols );
+	width: calc(calc(100% - calc(calc(#{$cols} - 1) * #{$mgn})) / #{$cols} );
+	&:nth-child(#{$cols}n) {
+		margin-right: 0;
+	}
+}

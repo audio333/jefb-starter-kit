@@ -1,0 +1,13 @@
+{
+  "name": "skootph",
+  "description": "clone site",
+  "main": "index.js",
+  "authors": [
+    "jeffreybalmes <jefbalmes@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/audio333/jefb-starter-kit",
+  "dependencies": {
+    "slick-lightbox": "^0.2.12"
+  }
+}

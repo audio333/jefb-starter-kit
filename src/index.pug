@@ -1,60 +1,11 @@
 extends layouts/app
 block content
-	<div class="social-icon social-icon--facebook"></div>
-	<div class="social-icon social-icon--twitter"></div>
-	<div class="social-icon social-icon--pinterest"></div>
-	<div class="social-icon social-icon--youtube"></div>
+	include includes/hero
+	.container
+		include includes/featured-products-cards
+	.container
+		include includes/description
+	.container
+		include includes/to-gallery
+	include includes/contact
 
-
-	<i aria-hidden="true" class="fas fa-bars"></i>
-	<i aria-hidden="true" class="fas fa-chevron-circle-up"></i>
-	<i aria-hidden="true" class="fas fa-search"></i>
-	<i aria-hidden="true" class="fas fa-shopping-cart"></i>
-
-
-	<div class="post mt-10">
-		<small class="grey-400">Info</small>
-		<h2 class="text-2xl"><a href="#">Title</a></h2>
-		//- <img class="img-responsive mb-3" src="images/image1.jpg" alt="photo">
-		<p>50-50 manual drop in mongo goofy footed. Nosebone mute-air axle helipop slob air. Coper Caballerial stalefish bail hanger Primo slide. Matt Hensley frontside air nollie pop shove-it rocket air cab flip. Skate or die rail slide regular footed acid drop carve.</p>
-		<button class="button button--warning button--sm mb-5">Learn More</button>
-	</div>
-
-	<h1 class="gigantic">Gigantic</h1>
-	<h1>h1</h1>
-	<h2>h2</h2>
-	<h3>h3</h3>
-	<h4>h4</h4>
-	<h5>h5</h5>
-	<small>small</small>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati accusantium sint distinctio.</p>
-
-	<div class="box bg-default">default</div>
-	<div class="box bg-success">success</div>
-	<div class="box bg-error">error</div>
-	<div class="box bg-warning">warning</div>
-	<div class="box bg-info">info</div>
-
-
-	<div class="mt-10 mb-10">
-		<button class="button--success button--xs">Button xs</button>
-		<button class="button--success button--sm">Button sm</button>
-		<button class="button--success button--base">Button base</button>
-		<button class="button--success button--lg">Button lg</button>
-		<button class="button--success button--xl">Button xl</button>
-		<button class="button--success button--2xl">Button 2xl</button>
-		<button class="button--success button--3xl">Button 3xl</button>
-		<button class="button--success button--4xl">Button 4xl</button>
-		<button class="button--success button--5xl">Button 5xl</button>
-	</div>
-
-
-	<p class="mb-0 text-xs">text xs</p>
-	<p class="mb-0 text-sm">text sm</p>
-	<p class="mb-0 text-base">text base</p>
-	<p class="mb-0 text-lg">text lg</p>
-	<p class="mb-0 text-xl">text xl</p>
-	<p class="mb-0 text-2xl">text 2xl</p>
-	<p class="mb-0 text-3xl">text 3xl</p>
-	<p class="mb-0 text-4xl">text 4xl</p>
-	<p class="mb-0 text-5xl">text 5xl</p>

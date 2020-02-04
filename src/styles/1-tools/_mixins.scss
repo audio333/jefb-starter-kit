@@ -1,36 +1,5 @@
-@mixin font-size($size, $line: $size * 1.5, $space: 0) {
-   font-size: $size;
-   line-height: $line;
-   letter-spacing: $space;
-}
-
-@mixin clearfix {
-   &::after {
-      content: '';
-      display: table;
-      clear: both;
-   }
-}
-
-// Extract Sass Map to CSS Variables
-@mixin use-map($map) {
-   @each $property, $value in $map {
-      --#{$property}: #{$value};
-   }
-}
-
-// Media Query
-@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
-  // If $mq-breakpoint is a key that exists in
-  // $mq-breakpoints, get and use the value
-  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
-  }
-
-  @media screen and (min-width: #{$mq-breakpoint}) {
-    @content;
-  }
-}
-
-// Usage:
-// @include mq(sm){...} / mq(1280px){...}
+@import 'mixins/fluid-type';
+@import 'mixins/grid';
+@import 'mixins/animation';
+@import 'mixins/mq';
+@import 'mixins/basics';

@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,600,700|Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Manjari:700&display=swap');
 
 /*-------------------------
 *  Sass Variables and Maps
 *--------------------------*/
-$font-sans: 'Source Sans Pro', sans-serif;
+$font-sans: 'Inconsolata', monospace;
+$font-sans2: 'Manjari', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
 $font-mono: 'Source Code Pro', monospace;
 
@@ -34,7 +35,7 @@ $breakpoints: (
    sm : 640px,
    md : 768px,
    lg : 1024px,
-   xl : 1280px,
+   xl : 1200px,
    2xl: 1700px
 );
 
@@ -44,7 +45,8 @@ $social-media: (
    facebook : (#3B5998, url('../icons/facebook.svg')),
    twitter  : (#55ACEE, url('../icons/twitter.svg')),
    pinterest: (#CC2127, url('../icons/pinterest.svg')),
-   youtube  : (#E52D27, url('../icons/youtube.svg'))
+   youtube  : (#E52D27, url('../icons/youtube.svg')),
+   instagram  : (#E52D27, url('../icons/instagram.svg')),
 );
 
 // Some Useful color Vars via http://clrs.cc/
@@ -57,13 +59,12 @@ $ui-colors: (
 );
 
 $theme-colors: (
-   'yellow': #FFD662,
-   'blue'  : #00539C,
+   'red': #d2302c,
 );
 
 $grayscale-colors: (
    'black'   : #000,
-   grey-100: #333,
+   grey-100: #454b5c,
    grey-200: #3D4852,
    grey-300: #606F7B,
    grey-400: #8795A1,
@@ -116,11 +117,6 @@ $margins : (
 
    // Sizes
    @each $property, $value in $rems {
-      .text-#{$property} {
-         font-size: $value;
-         line-height: calc(#{$value} * 1.25);
-      }
-
       --size-#{$property}: #{$value};
    }
 
@@ -150,19 +146,6 @@ $margins : (
 
 @include mq(md) {
    :root {
-      // Font Sizes
-      @each $property, $value in $rems {
-         .text-#{$property} {
-            font-size: calc(#{$value} * 1.3);
-         }
-
-         --size-#{$property}: calc(#{$value} * 1.3);
-      }
-
-      p {
-         font-size: 18px;
-      }
-
       // Spaces
       @each $property, $value in $spaces {
          --#{$property}: #{$value};
@@ -170,19 +153,6 @@ $margins : (
    }
 }
 
-
-@include mq(xl) {
-   :root {
-      // Font Sizes
-      @each $property, $value in $rems {
-         .text-#{$property} {
-            font-size: calc(#{$value} * 1.5);
-         }
-
-         --size-#{$property}: calc(#{$value} * 1.5);
-      }
-   }
-}
 
 
 /*-------------------------
