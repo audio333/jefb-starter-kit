@@ -20,6 +20,11 @@
 		}
 	}
 
+	a {
+		position: relative;
+		display: flex;
+	}
+
 	&__img {
 		opacity: 0;
 
@@ -45,6 +50,21 @@
 
 		&-6 {
 			grid-area: img6;
+		}
+	}
+
+	&__img-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #000;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: 500ms opacity ease-out;
+
+		&:hover {
+			opacity: 0.45;
 		}
 	}
 }

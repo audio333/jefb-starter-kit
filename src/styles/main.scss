@@ -16,7 +16,7 @@
 
 
 // 3 - LAYOUT
-@import '3-layout/nav';
+// @import '3-layout/nav';
 @import '3-layout/header';
 @import '3-layout/footer';
 
@@ -28,6 +28,7 @@
 @import '4-modules/to-gallery';
 @import '4-modules/contact';
 // small components
+@import '4-modules/line-separator';
 @import '4-modules/buttons';
 @import '4-modules/icons';
 @import '4-modules/banner';

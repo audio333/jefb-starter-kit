@@ -1,0 +1,29 @@
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// Text Contrast
+@function text-contrast($background) {
+   @if lightness($background) < 50% {
+      @return lighten($background, 70%);
+   } @else {
+      @return darken($background, 70%);
+   }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+   @if lightness($color) > 50% {
+      @return #000;
+   } @else {
+      @return #fff;
+   }
+}
+
+

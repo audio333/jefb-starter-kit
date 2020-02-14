@@ -12,6 +12,7 @@
 	}
 
 	&__body {
+		position: relative;
 		padding-top: 380px;
 		max-width: 100vw;
 		@include mq(md) {

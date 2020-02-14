@@ -1,18 +1,39 @@
 header
-	img.logo(src="images/logo.png", alt="logo")
 	nav
+		img.logo(src="images/logo.png", alt="logo")
 		ul.nav__links
 			li: a(href="#") Home
 			li: a(href="#section-featured-products") Scooters
 			li: a(href="#") Promos
 			li: a(href="#") Services
 			li: a(href="#section-contact") Contact Us
-	a.cta(href="#") Our Story
-	a.menu(href="#") Menu
-#mobile__menu.overlay
-	span.close: i.fas.fa-times
-	ul.overlay__content
-		li: a(href="#") About Us
-		li: a(href="#") Gallery
-		li: a(href="#") Testimonials
+		a.sidebar__open Our Story
+		a.mobile-nav__open(href="#")
+			i.fas.fa-bars
+.mobile-nav
+	span.mobile-nav__close: i.fas.fa-times
+	.mobile-nav__content
+		h4.mobile-nav__title Quicklinks
+		ul.mobile-nav__links
+			li: a(href="#") Home
+			li: a(href="#") Scooters
+			li: a(href="#") Promos
+			li: a(href="#") Services
+			li: a(href="#") Contact Us
+		h4.mobile-nav__title Discover Us
+		ul.mobile-nav__links
+			li: a(href="#") About Us
+			li: a(href="#") Gallery
+			li: a(href="#") Testimonials
+		h4.mobile-nav__title Visit Us
+		//- Map Here
+.sidebar
+	span.sidebar__close: i.fas.fa-times
+	.sidebar__content
+		ul.sidebar__links
+			li: a(href="#") About Us
+			li: a(href="#") Gallery
+			li: a(href="#") Testimonials
+		h4.sidebar__title Visit Us
+
 .bg-overlay

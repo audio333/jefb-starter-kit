@@ -23,6 +23,18 @@
 	animation: scale-up 800ms forwards ease-out;
 }
 
+.slide-x {
+	opacity: 0;
+}
+
+.slide-x.appear {
+	animation: from-left 1000ms forwards ease-out;
+
+	@include mq(md) {
+		animation: from-right 800ms forwards ease-out;
+	}
+}
+
 // Keyframes
 
 @include keyframes(fade-in) {
@@ -56,5 +68,29 @@
 	100% {
 		opacity: 1;
 		transform: scale(100%);
+	}
+}
+
+@include keyframes(from-right) {
+	0% {
+		opacity: 0;
+		transform: translateX(100vw);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@include keyframes(from-left) {
+	0% {
+		opacity: 0;
+		transform: translateX(-70%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

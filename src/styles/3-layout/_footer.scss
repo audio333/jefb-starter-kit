@@ -102,7 +102,11 @@ footer {
 	opacity: 0;
 	pointer-events: none;
 	transition: all .4s;
-	z-index: 99999;
+	z-index: 9;
+
+	&:hover {
+      background-color: shade(map-get($theme-colors, 'red'), 20%);
+	}
 }
 
 .to-top.active {

@@ -1,0 +1,25 @@
+// Convert pixels to ems
+@function em($pixels, $context: $base-fs) {
+   @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+   }
+
+   @if (unitless($context)) {
+      $context: $context * 1px;
+   }
+
+   @return $pixels / $context * 1em;
+}
+
+// Convert pixels to rems
+@function rem($pixels, $context: 18px) {
+   @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+   }
+
+   @if (unitless($context)) {
+      $context: $context * 1px;
+   }
+
+   @return $pixels / $context * 1rem;
+}

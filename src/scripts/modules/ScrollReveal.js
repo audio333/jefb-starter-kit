@@ -3,6 +3,7 @@ class ScrollReveal {
 		this.faders = document.querySelectorAll('.fade-in');
 		this.sliders = document.querySelectorAll('.slide-down');
 		this.scales = document.querySelectorAll('.scale-up');
+		this.fromSides = document.querySelectorAll('.slide-x');
 
 		// Intersection Observer
 		this.appearOptions = {
@@ -34,6 +35,9 @@ class ScrollReveal {
 		});
 		this.scales.forEach(scale => {
 			this.appearOnScroll.observe(scale);
+		});
+		this.fromSides.forEach(fromSide => {
+			this.appearOnScroll.observe(fromSide);
 		});
 	}
 }
